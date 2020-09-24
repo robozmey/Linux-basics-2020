@@ -17,6 +17,8 @@ class Test8(unittest.TestCase):
             result = len(only_the)
             f.close()
 
+        print(result)
+
         self.assertEqual(result, int(stdout))
 
 
