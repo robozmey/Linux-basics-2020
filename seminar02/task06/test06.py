@@ -9,7 +9,7 @@ class Test6(unittest.TestCase):
         stdout, stderr = p.communicate()
         stdout = stdout.decode('utf-8').split()
 
-        result = ['https://www.w3.org/', 'https://www.google.com/']
+        result = ['<<2:https://www.w3.org/>>', '<<3:https://www.google.com/>>']
 
         self.assertEqual(result, stdout)
 
