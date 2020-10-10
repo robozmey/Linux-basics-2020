@@ -29,6 +29,7 @@ class Test1(unittest.TestCase):
         self.assertTrue(self.check_stderr_time('fast'))
         self.assertTrue(self.check_stderr_time('slow'))
         self.assertTrue(self.check_stderr('make', 'clean'))
+        self.assertTrue(False)
 
 
 if __name__ == '__main__':
