@@ -1,0 +1,1024 @@
+Каждая новая команда начинается с (venv)
+
+
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ ifconfig
+lo0: flags=8049<UP,LOOPBACK,RUNNING,MULTICAST> mtu 16384
+        options=1203<RXCSUM,TXCSUM,TXSTATUS,SW_TIMESTAMP>
+        inet 127.0.0.1 netmask 0xff000000
+        inet6 ::1 prefixlen 128
+        inet6 fe80::1%lo0 prefixlen 64 scopeid 0x1
+        nd6 options=201<PERFORMNUD,DAD>
+gif0: flags=8010<POINTOPOINT,MULTICAST> mtu 1280
+stf0: flags=0<> mtu 1280
+en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=400<CHANNEL_IO>
+        ether 64:76:ba:ac:05:92
+        inet6 fe80::c24:39f6:e254:1864%en0 prefixlen 64 secured scopeid 0x4
+        inet 192.168.111.227 netmask 0xffffff00 broadcast 192.168.111.255
+        nd6 options=201<PERFORMNUD,DAD>
+        media: autoselect
+        status: active
+p2p0: flags=8843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST> mtu 2304
+        options=400<CHANNEL_IO>
+        ether 06:76:ba:ac:05:92
+        media: autoselect
+        status: inactive
+awdl0: flags=8943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1484
+        options=400<CHANNEL_IO>
+        ether 82:9e:63:bb:bc:31
+        inet6 fe80::809e:63ff:febb:bc31%awdl0 prefixlen 64 scopeid 0x6
+        nd6 options=201<PERFORMNUD,DAD>
+        media: autoselect
+        status: active
+llw0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=400<CHANNEL_IO>
+        ether 82:9e:63:bb:bc:31
+        inet6 fe80::809e:63ff:febb:bc31%llw0 prefixlen 64 scopeid 0x7
+        nd6 options=201<PERFORMNUD,DAD>
+        media: autoselect
+        status: active
+en1: flags=8963<UP,BROADCAST,SMART,RUNNING,PROMISC,SIMPLEX,MULTICAST> mtu 1500
+        options=460<TSO4,TSO6,CHANNEL_IO>
+        ether 82:0d:56:5a:80:00
+        media: autoselect <full-duplex>
+        status: inactive
+bridge0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
+        options=63<RXCSUM,TXCSUM,TSO4,TSO6>
+        ether 82:0d:56:5a:80:00
+        Configuration:
+                id 0:0:0:0:0:0 priority 0 hellotime 0 fwddelay 0
+                maxage 0 holdcnt 0 proto stp maxaddr 100 timeout 1200
+                root id 0:0:0:0:0:0 priority 0 ifcost 0 port 0
+                ipfilter disabled flags 0x0
+        member: en1 flags=3<LEARNING,DISCOVER>
+                ifmaxaddr 0 port 8 priority 0 path cost 0
+        nd6 options=201<PERFORMNUD,DAD>
+        media: <unknown type>
+        status: inactive
+utun0: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 1380
+        inet6 fe80::34c8:3d4e:9c5a:78b4%utun0 prefixlen 64 scopeid 0xa
+        nd6 options=201<PERFORMNUD,DAD>
+utun1: flags=8051<UP,POINTOPOINT,RUNNING,MULTICAST> mtu 2000
+        inet6 fe80::820d:56e2:8a10:30a7%utun1 prefixlen 64 scopeid 0xb
+        nd6 options=201<PERFORMNUD,DAD>
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ hostname
+Vladimirs-MacBook-Air.local
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ netstat
+Active Internet connections
+Proto Recv-Q Send-Q  Local Address          Foreign Address        (state)
+tcp4       0      0  192.168.111.227.60466  srv193-139-240-8.https ESTABLISHED
+tcp4       0      0  192.168.111.227.60465  srv193-139-240-8.https ESTABLISHED
+tcp4       0      0  192.168.111.227.60464  vip01.am4.lb.ope.https ESTABLISHED
+tcp4       0      0  192.168.111.227.60443  52.113.205.25.https    ESTABLISHED
+tcp4       0      0  192.168.111.227.60423  a23-54-1-67.depl.https ESTABLISHED
+tcp4       0      0  192.168.111.227.60422  upload-lb.esams..https ESTABLISHED
+tcp4       0      0  192.168.111.227.60420  text-lb.esams.wi.https ESTABLISHED
+tcp4       0      0  192.168.111.227.59611  149.154.167.50.https   ESTABLISHED
+tcp4       0      0  192.168.111.227.59565  145.33.211.130.b.https ESTABLISHED
+tcp4       0      0  192.168.111.227.59548  lr-in-f109.1e100.imaps ESTABLISHED
+tcp4       0      0  192.168.111.227.59489  47.224.186.35.bc.https ESTABLISHED
+tcp4       0      0  192.168.111.227.58836  52.114.88.63.https     ESTABLISHED
+tcp4       0      0  192.168.111.227.58790  149.154.167.51.https   ESTABLISHED
+tcp4       0      0  192.168.111.227.57176  17.57.146.134.5223     ESTABLISHED
+tcp4       0      0  192.168.111.227.57114  52.113.205.20.https    ESTABLISHED
+tcp4      31      0  192.168.111.227.51970  zoomnym223.zoom..https CLOSE_WAIT
+tcp4       0      0  192.168.111.227.51319  ec2-3-123-217-20.https ESTABLISHED
+tcp4       0      0  192.168.111.227.51124  lo-in-f188.1e100.https ESTABLISHED
+tcp4       0      0  192.168.111.227.51115  127.64.199.104.b.4070  ESTABLISHED
+tcp4       0      0  192.168.111.227.60449  li-in-f108.1e100.imaps TIME_WAIT
+tcp4       0      0  192.168.111.227.60450  lg-in-f108.1e100.imaps TIME_WAIT
+udp6       0      0  *.60727                *.*
+udp4       0      0  192.168.111.227.62051  lg-in-f101.1e100.https
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.52712                *.*
+udp4       0      0  *.64593                *.*
+udp4       0      0  *.mdns                 *.*
+udp4       0      0  *.57621                *.*
+udp6       0      0  *.61766                *.*
+udp4       0      0  *.61766                *.*
+udp6       0      0  *.55274                *.*
+udp4       0      0  *.55274                *.*
+udp6       0      0  *.56615                *.*
+udp4       0      0  *.56615                *.*
+udp4       0      0  *.*                    *.*
+udp46      0      0  *.mdns                 *.*
+udp46      0      0  *.mdns                 *.*
+udp46      0      0  *.mdns                 *.*
+udp46      0      0  *.mdns                 *.*
+udp46      0      0  *.mdns                 *.*
+udp4       0      0  *.mdns                 *.*
+udp46      0      0  *.52126                *.*
+udp46      0      0  *.52125                *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.49484                *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp46      0      0  *.*                    *.*
+udp4       0      0  *.*                    *.*
+udp6       0      0  *.mdns                 *.*
+udp4       0      0  *.mdns                 *.*
+udp4       0      0  *.netbios-dgm          *.*
+udp4       0      0  *.netbios-ns           *.*
+Active Multipath Internet connections
+Proto/ID  Flags      Local Address          Foreign Address        (state)
+icm6       0      0  *.*                    *.*
+Active LOCAL (UNIX) domain sockets
+Address          Type   Recv-Q Send-Q            Inode             Conn             Refs          Nextref Addr
+df15f91d2a1b0615 stream      0      0                0 df15f91d2a1b0ead                0                0 /var/run/mDNSResponder
+df15f91d2a1b0ead stream      0      0                0 df15f91d2a1b0615                0                0
+df15f91d2a1b054d stream      0      0                0 df15f91d2a1af0fd                0                0
+df15f91d2a1af0fd stream      0      0                0 df15f91d2a1b054d                0                0
+df15f91d2a1b0f75 stream      0      0                0 df15f91d2a1aef6d                0                0 /var/run/mDNSResponder
+df15f91d2a1aef6d stream      0      0                0 df15f91d2a1b0f75                0                0
+df15f91d2a1b1425 stream      0      0                0                0                0                0
+df15f91d2a1b0c55 stream      0      0                0                0                0                0
+df15f91d2a1af28d stream      0      0                0 df15f91d2a1b09fd                0                0 /var/run/mDNSResponder
+df15f91d2a1b09fd stream      0      0                0 df15f91d2a1af28d                0                0
+df15f91d2a1aeddd stream      0      0                0 df15f91d2a1af73d                0                0 /var/run/mDNSResponder
+df15f91d2a1af73d stream      0      0                0 df15f91d2a1aeddd                0                0
+df15f91d2340f5ad stream      0      0                0 df15f91d2340e865                0                0 /var/run/mDNSResponder
+df15f91d2340e865 stream      0      0                0 df15f91d2340f5ad                0                0
+df15f91d2340f675 stream      0      0                0 df15f91d2340eabd                0                0
+df15f91d2340eabd stream      0      0                0 df15f91d2340f675                0                0
+df15f91d2340fa5d stream      0      0                0 df15f91d23410165                0                0
+df15f91d23410165 stream      0      0                0 df15f91d2340fa5d                0                0
+df15f91d2340e545 stream      0      0                0 df15f91d23410b8d                0                0 /var/run/mDNSResponder
+df15f91d23410b8d stream      0      0                0 df15f91d2340e545                0                0
+df15f91d2340f8cd stream      0      0                0 df15f91d2341009d                0                0
+df15f91d2341009d stream      0      0                0 df15f91d2340f8cd                0                0
+df15f91d23410485 stream      0      0                0 df15f91d234106dd                0                0
+df15f91d234106dd stream      0      0                0 df15f91d23410485                0                0
+df15f91d2340ff0d stream      0      0                0 df15f91d23410935                0                0
+df15f91d23410935 stream      0      0                0 df15f91d2340ff0d                0                0
+df15f91d2341086d stream      0      0                0 df15f91d234107a5                0                0
+df15f91d234107a5 stream      0      0                0 df15f91d2341086d                0                0
+df15f91d23411425 stream      0      0                0 df15f91d2340e9f5                0                0
+df15f91d2340e9f5 stream      0      0                0 df15f91d23411425                0                0
+df15f91d26b5f60d stream      0      0                0 df15f91d26b5f79d                0                0 /var/run/mDNSResponder
+df15f91d26b5f79d stream      0      0                0 df15f91d26b5f60d                0                0
+df15f91d26b62105 stream      0      0                0 df15f91d26b60b25                0                0 /var/run/mDNSResponder
+df15f91d26b60b25 stream      0      0                0 df15f91d26b62105                0                0
+df15f91d26b60bed stream      0      0                0 df15f91d26b60805                0                0 /var/run/mDNSResponder
+df15f91d26b60805 stream      0      0                0 df15f91d26b60bed                0                0
+df15f91d26b62425 stream      0      0                0 df15f91d26b613bd                0                0 /var/run/mDNSResponder
+df15f91d26b613bd stream      0      0                0 df15f91d26b62425                0                0
+df15f91d249fe5ad stream      0      0                0 df15f91d249fe675                0                0 /var/run/mDNSResponder
+df15f91d249fe675 stream      0      0                0 df15f91d249fe5ad                0                0
+df15f91d249ff165 stream      0      0                0 df15f91d249fe805                0                0 /var/run/mDNSResponder
+df15f91d249fe805 stream      0      0                0 df15f91d249ff165                0                0
+df15f91d2340f355 stream      0      0                0 df15f91d2340f41d                0                0 /var/run/mDNSResponder
+df15f91d2340f41d stream      0      0                0 df15f91d2340f355                0                0
+df15f91d26b61d1d stream      0      0                0 df15f91d26b61f75                0                0
+df15f91d26b61f75 stream      8      0                0 df15f91d26b61d1d                0                0
+df15f91d26b612f5 stream      0      0 df15f91d191b0b45                0                0                0 /var/folders/fv/dldyf40n0csf2y1y1zxdkd200000gn/T/.Opera.0c155E/SingletonSocket
+df15f91d26b5f545 stream      0      0                0 df15f91d26b6073d                0                0 /var/run/mDNSResponder
+df15f91d26b6073d stream      0      0                0 df15f91d26b5f545                0                0
+df15f91d26b5f9f5 stream      0      0                0 df15f91d26b608cd                0                0 /var/run/mDNSResponder
+df15f91d26b608cd stream      0      0                0 df15f91d26b5f9f5                0                0
+df15f91d2340eddd stream      0      0                0 df15f91d2340e79d                0                0 /var/run/mDNSResponder
+df15f91d2340e79d stream      0      0                0 df15f91d2340eddd                0                0
+df15f91d2341022d stream      0      0                0 df15f91d2340e60d                0                0
+df15f91d2340e60d stream      0      0                0 df15f91d2341022d                0                0
+df15f91d2340ec4d stream      0      0                0 df15f91d2341135d                0                0
+df15f91d2341135d stream      0      0                0 df15f91d2340ec4d                0                0
+df15f91d2340f1c5 stream      0      0                0 df15f91d2340fb25                0                0
+df15f91d2340fb25 stream      0      0                0 df15f91d2340f1c5                0                0
+df15f91d234103bd stream      0      0                0 df15f91d23410ac5                0                0
+df15f91d23410ac5 stream      0      0                0 df15f91d234103bd                0                0
+df15f91d23410615 stream      0      0                0 df15f91d23410ead                0                0
+df15f91d23410ead stream      0      0                0 df15f91d23410615                0                0
+df15f91d2340ef6d stream      0      0                0 df15f91d23410c55                0                0
+df15f91d23410c55 stream      0      0                0 df15f91d2340ef6d                0                0
+df15f91d2340fe45 stream      0      0                0 df15f91d23410d1d                0                0
+df15f91d23410d1d stream      0      0                0 df15f91d2340fe45                0                0
+df15f91d2340eea5 stream      0      0                0 df15f91d2340fd7d                0                0
+df15f91d2340fd7d stream      0      0                0 df15f91d2340eea5                0                0
+df15f91d2340fbed stream      0      0                0 df15f91d2340f035                0                0 /var/run/mDNSResponder
+df15f91d2340f035 stream      0      0                0 df15f91d2340fbed                0                0
+df15f91d2340f28d stream      0      0                0 df15f91d23410f75                0                0
+df15f91d23410f75 stream      0      0                0 df15f91d2340f28d                0                0
+df15f91d2340fcb5 stream      0      0 df15f91d1a846f45                0                0                0 /var/folders/fv/dldyf40n0csf2y1y1zxdkd200000gn/T/.com.microsoft.teams.Gkife3/SS
+df15f91d2a1b0b8d stream      0      0                0 df15f91d2a1aeea5                0                0 /var/run/mDNSResponder
+df15f91d2a1aeea5 stream      0      0                0 df15f91d2a1b0b8d                0                0
+df15f91d2a1b086d stream      0      0                0 df15f91d2a1af035                0                0 /var/run/mDNSResponder
+df15f91d2a1af035 stream      0      0                0 df15f91d2a1b086d                0                0
+df15f91d2a1af1c5 stream      0      0                0 df15f91d2a1ae9f5                0                0 /var/run/mDNSResponder
+df15f91d2a1ae9f5 stream      0      0                0 df15f91d2a1af1c5                0                0
+df15f91d2a1b022d stream      0      0                0 df15f91d2a1afd7d                0                0 /var/run/mDNSResponder
+df15f91d2a1afd7d stream      0      0                0 df15f91d2a1b022d                0                0
+df15f91d2a1b0165 stream      0      0                0 df15f91d2a1afe45                0                0 /var/run/mDNSResponder
+df15f91d2a1afe45 stream      0      0                0 df15f91d2a1b0165                0                0
+df15f91d26b5fc4d stream      0      0                0 df15f91d26b619fd                0                0 /var/run/mDNSResponder
+df15f91d26b619fd stream      0      0                0 df15f91d26b5fc4d                0                0
+df15f91d26b5fd15 stream      0      0                0 df15f91d26b5fddd                0                0 /var/run/mDNSResponder
+df15f91d26b5fddd stream      0      0                0 df15f91d26b5fd15                0                0
+df15f91d26b5fea5 stream      0      0                0 df15f91d26b61935                0                0 /var/run/mDNSResponder
+df15f91d26b61935 stream      0      0                0 df15f91d26b5fea5                0                0
+df15f91d26b6186d stream      0      0                0 df15f91d26b617a5                0                0 /var/run/mDNSResponder
+df15f91d26b617a5 stream      0      0                0 df15f91d26b6186d                0                0
+df15f91d26b5ff6d stream      0      0                0 df15f91d26b600fd                0                0 /var/run/mDNSResponder
+df15f91d26b60035 stream      0      0                0 df15f91d26b601c5                0                0 /var/run/mDNSResponder
+df15f91d26b600fd stream      0      0                0 df15f91d26b5ff6d                0                0
+df15f91d26b601c5 stream      0      0                0 df15f91d26b60035                0                0
+df15f91d26b6028d stream      0      0                0 df15f91d26b60355                0                0 /var/run/mDNSResponder
+df15f91d26b60355 stream      0      0                0 df15f91d26b6028d                0                0
+df15f91d26b6041d stream      0      0                0 df15f91d26b604e5                0                0 /var/run/mDNSResponder
+df15f91d26b604e5 stream      0      0                0 df15f91d26b6041d                0                0
+df15f91d26b60675 stream      0      0                0 df15f91d26b605ad                0                0 /var/run/mDNSResponder
+df15f91d26b605ad stream      0      0                0 df15f91d26b60675                0                0
+df15f91d26b61615 stream      0      0                0 df15f91d26b616dd                0                0 /var/run/mDNSResponder
+df15f91d26b616dd stream      0      0                0 df15f91d26b61615                0                0
+df15f91d26b60d7d stream      0      0                0 df15f91d26b60f0d                0                0 /var/run/mDNSResponder
+df15f91d26b60f0d stream      0      0                0 df15f91d26b60d7d                0                0
+df15f91d26b61485 stream      0      0                0 df15f91d26b60e45                0                0 /var/run/mDNSResponder
+df15f91d26b60e45 stream      0      0                0 df15f91d26b61485                0                0
+df15f91d26b6109d stream      0      0                0 df15f91d26b6122d                0                0 /var/run/mDNSResponder
+df15f91d26b6122d stream      0      0                0 df15f91d26b6109d                0                0
+df15f91d26b61165 stream      0      0                0 df15f91d249fd545                0                0 /var/run/mDNSResponder
+df15f91d249fd545 stream      0      0                0 df15f91d26b61165                0                0
+df15f91d249fd865 stream      0      0 df15f91d1a3e9d45                0                0                0 /tmp/f202ae90ceacc2038ac73a251d5f2b33-{87A94AB0-E370-4cde-98D3-ACC110C5967D}
+df15f91d249fd9f5 stream      0      0                0 df15f91d24a0035d                0                0 /var/run/usbmuxd
+df15f91d24a0035d stream      0      0                0 df15f91d249fd9f5                0                0
+df15f91d249fff75 stream      0      0                0 df15f91d249ffd1d                0                0 /var/run/usbmuxd
+df15f91d249ffd1d stream      0      0                0 df15f91d249fff75                0                0
+df15f91d249fe355 stream      0      0                0 df15f91d249ff935                0                0 /var/run/mDNSResponder
+df15f91d249ff935 stream      0      0                0 df15f91d249fe355                0                0
+df15f91d249fea5d stream      0      0                0 df15f91d249ffb8d                0                0 /var/run/mDNSResponder
+df15f91d249ffb8d stream      0      0                0 df15f91d249fea5d                0                0
+df15f91d249ff6dd stream      0      0                0 df15f91d249ff615                0                0
+df15f91d249ff615 stream      0      0                0 df15f91d249ff6dd                0                0
+df15f91d249ff54d stream      0      0                0 df15f91d249ff485                0                0
+df15f91d249ff485 stream      0      0                0 df15f91d249ff54d                0                0
+df15f91d249ff3bd stream      0      0                0 df15f91d249febed                0                0
+df15f91d249febed stream      0      0                0 df15f91d249ff3bd                0                0
+df15f91d249ff2f5 stream      0      0                0 df15f91d249ff22d                0                0
+df15f91d249ff22d stream      0      0                0 df15f91d249ff2f5                0                0
+df15f91d249fefd5 stream      0      0                0 df15f91d249fef0d                0                0 /var/run/mDNSResponder
+df15f91d249fef0d stream      0      0                0 df15f91d249fefd5                0                0
+df15f91d249fee45 stream      0      0                0 df15f91d249fecb5                0                0 /var/run/mDNSResponder
+df15f91d249fecb5 stream      0      0                0 df15f91d249fee45                0                0
+df15f91d13f07295 stream      0      0 df15f91d18030d45                0                0                0 /var/tmp/filesystemui.socket
+df15f91d13f0460d stream      0      0 df15f91d18030c45                0                0                0 /private/tmp/com.apple.launchd.pk3fNqCb7A/Listeners
+df15f91d13f04545 stream      0      0                0 df15f91d13f0479d                0                0 /var/run/mDNSResponder
+df15f91d13f0479d stream      0      0                0 df15f91d13f04545                0                0
+df15f91d13f055ad stream      0      0                0 df15f91d13f05675                0                0
+df15f91d13f05675 stream      0      0                0 df15f91d13f055ad                0                0
+df15f91d13f06b8d stream      0      0 df15f91d1962fc45                0                0                0 /var/run/displaypolicyd/state
+df15f91d13f0686d stream      0      0 df15f91d19402845                0                0                0 /var/run/pppconfd
+df15f91d13f05805 stream      0      0 df15f91d191e4c45                0                0                0 /var/run/usbmuxd
+df15f91d13f06485 stream      0      0 df15f91d191e3445                0                0                0 /var/rpc/ncalrpc/srvsvc
+df15f91d13f058cd stream      0      0 df15f91d191e3345                0                0                0 /var/rpc/ncacn_np/srvsvc
+df15f91d13f063bd stream      0      0 df15f91d191e2645                0                0                0 /var/rpc/ncalrpc/wkssvc
+df15f91d13f05995 stream      0      0 df15f91d191e3145                0                0                0 /var/rpc/ncacn_np/wkssvc
+df15f91d13f05a5d stream      0      0 df15f91d191e2745                0                0                0 /var/rpc/ncacn_np/mdssvc
+df15f91d13f062f5 stream      0      0 df15f91d191e3045                0                0                0 /var/rpc/ncalrpc/lsarpc
+df15f91d13f05b25 stream      0      0 df15f91d191e2845                0                0                0 /var/rpc/ncacn_np/lsarpc
+df15f91d13f05bed stream      0      0 df15f91d191e2f45                0                0                0 /var/run/mDNSResponder
+df15f91d13f0622d stream      0      0 df15f91d191e2e45                0                0                0 /var/run/systemkeychaincheck.socket
+df15f91d13f05cb5 stream      0      0 df15f91d191e2d45                0                0                0 /private/var/run/.sim_diagnosticd_socket
+df15f91d13f06165 stream      0      0 df15f91d191e2a45                0                0                0 /var/run/portmap.socket
+df15f91d13f05d7d stream      0      0 df15f91d191e2b45                0                0                0 /var/run/vpncontrol.sock
+df15f91d13f0609d stream      0      0 df15f91d191e2c45                0                0                0 /var/rpc/ncalrpc/NETLOGON
+df15f91d13f05e45 stream      0      0 df15f91d191df245                0                0                0 /private/var/run/cupsd
+df15f91d2a1b103d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2a1b0ac5
+df15f91d2a1b0ac5 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2a1af4e5
+df15f91d2a1af4e5 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2a1b0485
+df15f91d2a1b0485 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2a1af675
+df15f91d2a1af675 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2a1aed15
+df15f91d2a1aed15 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2a1afa5d
+df15f91d2a1afa5d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2a1aff0d
+df15f91d2a1b11cd dgram       0      0                0 df15f91d2a1b0935 df15f91d2a1b0935                0
+df15f91d2a1b0935 dgram       0      0                0 df15f91d2a1b11cd df15f91d2a1b11cd                0
+df15f91d2a1aff0d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2341054d
+df15f91d2341054d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d26b61ead
+df15f91d26b61ead dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2a1af355
+df15f91d2a1af355 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d26b6235d
+df15f91d2340f4e5 dgram       0      0                0 df15f91d23411105 df15f91d23411105                0
+df15f91d23411105 dgram       0      0                0 df15f91d2340f4e5 df15f91d2340f4e5                0
+df15f91d26b6235d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f051c5
+df15f91d13f051c5 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d2a1af805
+df15f91d2a1af805 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f0735d
+df15f91d2a1b02f5 dgram       0      0                0 df15f91d2a1afcb5 df15f91d2a1afcb5                0
+df15f91d2a1afcb5 dgram       0      0                0 df15f91d2a1b02f5 df15f91d2a1b02f5                0
+df15f91d24a00425 dgram       0      0                0 df15f91d249fd92d df15f91d249fd92d                0
+df15f91d249fd92d dgram       0      0                0 df15f91d24a00425 df15f91d24a00425                0
+df15f91d13f0735d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d249fd60d
+df15f91d249fd60d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d249fd6d5
+df15f91d249fd6d5 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d249fe41d
+df15f91d24a0003d dgram       0      0                0 df15f91d249fdb85 df15f91d249fdb85                0
+df15f91d249fdb85 dgram       0      0                0 df15f91d24a0003d df15f91d24a0003d                0
+df15f91d249ff86d dgram       0      0                0 df15f91d249feb25 df15f91d249feb25                0
+df15f91d249feb25 dgram       0      0                0 df15f91d249ff86d df15f91d249ff86d                0
+df15f91d249fe41d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d249ffc55
+df15f91d249fe73d dgram       0      0                0 df15f91d249ffde5 df15f91d249ffde5                0
+df15f91d249ffde5 dgram       0      0                0 df15f91d249fe73d df15f91d249fe73d                0
+df15f91d249ffc55 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d249ffac5
+df15f91d249ffac5 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d249ff09d
+df15f91d249ff09d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d249fed7d
+df15f91d249fed7d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f04865
+df15f91d13f04865 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f04ddd
+df15f91d13f04d15 dgram       0      0                0 df15f91d13f04c4d df15f91d13f04c4d                0
+df15f91d13f04c4d dgram       0      0                0 df15f91d13f04d15 df15f91d13f04d15                0
+df15f91d13f04ddd dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f04b85
+df15f91d13f04b85 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f04ea5
+df15f91d13f04ea5 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f0541d
+df15f91d13f0541d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f05355
+df15f91d13f05355 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f06d1d
+df15f91d13f050fd dgram       0      0                0 df15f91d13f0703d df15f91d13f0703d                0
+df15f91d13f0703d dgram       0      0                0 df15f91d13f050fd df15f91d13f050fd                0
+df15f91d13f06c55 dgram       0      0                0 df15f91d13f06ac5 df15f91d13f06ac5                0
+df15f91d13f06ac5 dgram       0      0                0 df15f91d13f06c55 df15f91d13f06c55                0
+df15f91d13f06d1d dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f066dd
+df15f91d13f054e5 dgram       0      0                0 df15f91d13f06f75 df15f91d13f06f75                0
+df15f91d13f06f75 dgram       0      0                0 df15f91d13f054e5 df15f91d13f054e5                0
+df15f91d13f06ead dgram       0      0                0 df15f91d13f06de5 df15f91d13f06de5                0
+df15f91d13f06de5 dgram       0      0                0 df15f91d13f06ead df15f91d13f06ead                0
+df15f91d13f069fd dgram       0      0                0 df15f91d13f06935 df15f91d13f06935                0
+df15f91d13f06935 dgram       0      0                0 df15f91d13f069fd df15f91d13f069fd                0
+df15f91d13f066dd dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f06615
+df15f91d13f06615 dgram       0      0                0 df15f91d13f05f0d                0 df15f91d13f05fd5
+df15f91d13f0654d dgram       0      0                0 df15f91d13f0573d df15f91d13f0573d                0
+df15f91d13f0573d dgram       0      0                0 df15f91d13f0654d df15f91d13f0654d                0
+df15f91d13f05fd5 dgram       0      0                0 df15f91d13f05f0d                0                0
+df15f91d13f05f0d dgram       0      0 df15f91d13effc45                0 df15f91d2a1b103d                0 /private//var/run/syslog
+Registered kernel control modules
+id       flags    pcbcount rcvbuf   sndbuf   name
+       1        9        0   131072   131072 com.apple.flow-divert
+       2        1        0    16384     2048 com.apple.nke.sockwall
+       3        9        0   524288   524288 com.apple.content-filter
+       4        1       12    65536    65536 com.apple.net.netagent
+       5        9        2   524288   524288 com.apple.net.utun_control
+       6        1        0    65536    65536 com.apple.net.ipsec_control
+       7        0       31     8192     2048 com.apple.netsrc
+       8       18        3     8192     2048 com.apple.network.statistics
+       9        5        0     8192    32768 com.apple.network.tcp_ccdebug
+       a        1        0     8192     2048 com.apple.network.advisory
+       b        0        0     8192     8192 com.apple.fileutil.kext.stateful.ctl
+       c        0        0     8192     2048 com.apple.fileutil.kext.stateless.ctl
+Active kernel event sockets
+Proto Recv-Q Send-Q vendor  class subcla
+kevt       0      0      1      1     11
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      6      1
+kevt       0      0      1      1      2
+kevt       0      0      1      6      1
+kevt       0      0      1      3      3
+kevt       0      0      1      1      2
+kevt       0      0      1      1      7
+kevt       0      0      1      1      1
+kevt       0      0      1      1      0
+Active kernel control sockets
+Proto Recv-Q Send-Q   unit     id name
+kctl       0      0      1      4 com.apple.net.netagent
+kctl       0      0      2      4 com.apple.net.netagent
+kctl       0      0      3      4 com.apple.net.netagent
+kctl       0      0      4      4 com.apple.net.netagent
+kctl       0      0      5      4 com.apple.net.netagent
+kctl       0      0      6      4 com.apple.net.netagent
+kctl       0      0      7      4 com.apple.net.netagent
+kctl       0      0      8      4 com.apple.net.netagent
+kctl       0      0      9      4 com.apple.net.netagent
+kctl       0      0     10      4 com.apple.net.netagent
+kctl       0      0     11      4 com.apple.net.netagent
+kctl       0      0     12      4 com.apple.net.netagent
+kctl       0      0      1      5 com.apple.net.utun_control
+kctl       0      0      2      5 com.apple.net.utun_control
+kctl       0      0      1      7 com.apple.netsrc
+kctl       0      0      2      7 com.apple.netsrc
+kctl       0      0      3      7 com.apple.netsrc
+kctl       0      0      4      7 com.apple.netsrc
+kctl       0      0      5      7 com.apple.netsrc
+kctl       0      0      6      7 com.apple.netsrc
+kctl       0      0      7      7 com.apple.netsrc
+kctl       0      0      8      7 com.apple.netsrc
+kctl       0      0      9      7 com.apple.netsrc
+kctl       0      0     10      7 com.apple.netsrc
+kctl       0      0     11      7 com.apple.netsrc
+kctl       0      0     12      7 com.apple.netsrc
+kctl       0      0     13      7 com.apple.netsrc
+kctl       0      0     14      7 com.apple.netsrc
+kctl       0      0     15      7 com.apple.netsrc
+kctl       0      0     16      7 com.apple.netsrc
+kctl       0      0     17      7 com.apple.netsrc
+kctl       0      0     18      7 com.apple.netsrc
+kctl       0      0     19      7 com.apple.netsrc
+kctl       0      0     21      7 com.apple.netsrc
+kctl       0      0     22      7 com.apple.netsrc
+kctl       0      0     23      7 com.apple.netsrc
+kctl       0      0     24      7 com.apple.netsrc
+kctl       0      0     26      7 com.apple.netsrc
+kctl       0      0     27      7 com.apple.netsrc
+kctl       0      0     28      7 com.apple.netsrc
+kctl       0      0     30      7 com.apple.netsrc
+kctl       0      0     32      7 com.apple.netsrc
+kctl       0      0     33      7 com.apple.netsrc
+kctl       0      0     34      7 com.apple.netsrc
+kctl       0      0     37      7 com.apple.netsrc
+kctl       0      0      1      8 com.apple.network.statistics
+kctl       0      0      2      8 com.apple.network.statistics
+kctl       0      0      3      8 com.apple.network.statistics
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ ping
+usage: ping [-AaDdfnoQqRrv] [-c count] [-G sweepmaxsize]
+            [-g sweepminsize] [-h sweepincrsize] [-i wait]
+            [-l preload] [-M mask | time] [-m ttl] [-p pattern]
+            [-S src_addr] [-s packetsize] [-t timeout][-W waittime]
+            [-z tos] host
+       ping [-AaDdfLnoQqRrv] [-c count] [-I iface] [-i wait]
+            [-l preload] [-M mask | time] [-m ttl] [-p pattern] [-S src_addr]
+            [-s packetsize] [-T ttl] [-t timeout] [-W waittime]
+            [-z tos] mcast-group
+Apple specific options (to be specified before mcast-group or host like all options)
+            -b boundif           # bind the socket to the interface
+            -k traffic_class     # set traffic class socket option
+            -K net_service_type  # set traffic class socket options
+            -apple-connect       # call connect(2) in the socket
+            -apple-time          # display current time
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ ping google.com
+PING google.com (74.125.205.101): 56 data bytes
+64 bytes from 74.125.205.101: icmp_seq=0 ttl=111 time=5.656 ms
+64 bytes from 74.125.205.101: icmp_seq=1 ttl=111 time=8.547 ms
+64 bytes from 74.125.205.101: icmp_seq=2 ttl=111 time=6.388 ms
+64 bytes from 74.125.205.101: icmp_seq=3 ttl=111 time=24.597 ms
+64 bytes from 74.125.205.101: icmp_seq=4 ttl=111 time=6.003 ms
+64 bytes from 74.125.205.101: icmp_seq=5 ttl=111 time=27.554 ms
+64 bytes from 74.125.205.101: icmp_seq=6 ttl=111 time=6.222 ms
+64 bytes from 74.125.205.101: icmp_seq=7 ttl=111 time=9.863 ms
+64 bytes from 74.125.205.101: icmp_seq=8 ttl=111 time=7.874 ms
+64 bytes from 74.125.205.101: icmp_seq=9 ttl=111 time=6.614 ms
+64 bytes from 74.125.205.101: icmp_seq=10 ttl=111 time=5.818 ms
+64 bytes from 74.125.205.101: icmp_seq=11 ttl=111 time=6.877 ms
+64 bytes from 74.125.205.101: icmp_seq=12 ttl=111 time=8.661 ms
+64 bytes from 74.125.205.101: icmp_seq=13 ttl=111 time=7.755 ms
+64 bytes from 74.125.205.101: icmp_seq=14 ttl=111 time=6.033 ms
+64 bytes from 74.125.205.101: icmp_seq=15 ttl=111 time=6.476 ms
+64 bytes from 74.125.205.101: icmp_seq=16 ttl=111 time=8.251 ms
+64 bytes from 74.125.205.101: icmp_seq=17 ttl=111 time=8.001 ms
+64 bytes from 74.125.205.101: icmp_seq=18 ttl=111 time=6.734 ms
+Request timeout for icmp_seq 19
+64 bytes from 74.125.205.101: icmp_seq=20 ttl=111 time=63.534 ms
+64 bytes from 74.125.205.101: icmp_seq=21 ttl=111 time=6.275 ms
+64 bytes from 74.125.205.101: icmp_seq=22 ttl=111 time=6.582 ms
+64 bytes from 74.125.205.101: icmp_seq=23 ttl=111 time=14.132 ms
+64 bytes from 74.125.205.101: icmp_seq=24 ttl=111 time=6.732 ms
+64 bytes from 74.125.205.101: icmp_seq=25 ttl=111 time=6.360 ms
+64 bytes from 74.125.205.101: icmp_seq=26 ttl=111 time=9.486 ms
+64 bytes from 74.125.205.101: icmp_seq=27 ttl=111 time=7.192 ms
+64 bytes from 74.125.205.101: icmp_seq=28 ttl=111 time=9.478 ms
+64 bytes from 74.125.205.101: icmp_seq=29 ttl=111 time=8.651 ms
+64 bytes from 74.125.205.101: icmp_seq=30 ttl=111 time=6.316 ms
+64 bytes from 74.125.205.101: icmp_seq=31 ttl=111 time=6.458 ms
+64 bytes from 74.125.205.101: icmp_seq=32 ttl=111 time=7.665 ms
+64 bytes from 74.125.205.101: icmp_seq=33 ttl=111 time=7.398 ms
+64 bytes from 74.125.205.101: icmp_seq=34 ttl=111 time=8.079 ms
+64 bytes from 74.125.205.101: icmp_seq=35 ttl=111 time=7.437 ms
+64 bytes from 74.125.205.101: icmp_seq=36 ttl=111 time=8.663 ms
+64 bytes from 74.125.205.101: icmp_seq=37 ttl=111 time=6.367 ms
+64 bytes from 74.125.205.101: icmp_seq=38 ttl=111 time=54.997 ms
+64 bytes from 74.125.205.101: icmp_seq=39 ttl=111 time=9.596 ms
+64 bytes from 74.125.205.101: icmp_seq=40 ttl=111 time=7.985 ms
+64 bytes from 74.125.205.101: icmp_seq=41 ttl=111 time=7.000 ms
+64 bytes from 74.125.205.101: icmp_seq=42 ttl=111 time=8.972 ms
+64 bytes from 74.125.205.101: icmp_seq=43 ttl=111 time=9.245 ms
+64 bytes from 74.125.205.101: icmp_seq=44 ttl=111 time=28.816 ms
+64 bytes from 74.125.205.101: icmp_seq=45 ttl=111 time=7.249 ms
+64 bytes from 74.125.205.101: icmp_seq=46 ttl=111 time=9.200 ms
+64 bytes from 74.125.205.101: icmp_seq=47 ttl=111 time=9.281 ms
+64 bytes from 74.125.205.101: icmp_seq=48 ttl=111 time=8.072 ms
+64 bytes from 74.125.205.101: icmp_seq=49 ttl=111 time=6.382 ms
+^C
+--- google.com ping statistics ---
+50 packets transmitted, 49 packets received, 2.0% packet loss
+round-trip min/avg/max/stddev = 5.656/10.970/63.534/11.122 ms
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ traceroute google.com
+traceroute: Warning: google.com has multiple addresses; using 74.125.205.101
+traceroute to google.com (74.125.205.101), 64 hops max, 52 byte packets
+ 1  router (192.168.111.1)  2.270 ms  0.988 ms  1.145 ms
+ 2  vlan591.schevchenko.bb.pu.ru (81.89.176.1)  32.894 ms  13.640 ms  29.961 ms
+ 3  vlan3.kronos.pu.ru (195.70.196.3)  44.227 ms  1.715 ms  1.550 ms
+ 4  195.70.206.129 (195.70.206.129)  1.643 ms  6.892 ms  1.335 ms
+ 5  gw1.spb-ix.google.com (194.226.100.138)  2.789 ms  2.075 ms  2.178 ms
+ 6  74.125.244.180 (74.125.244.180)  2.392 ms
+    74.125.244.132 (74.125.244.132)  2.810 ms
+    74.125.244.180 (74.125.244.180)  2.096 ms
+ 7  172.253.64.49 (172.253.64.49)  6.279 ms
+    72.14.232.85 (72.14.232.85)  5.368 ms
+    172.253.64.49 (172.253.64.49)  7.672 ms
+ 8  216.239.47.203 (216.239.47.203)  7.405 ms *
+    216.239.63.27 (216.239.63.27)  7.692 ms
+ 9  216.239.63.65 (216.239.63.65)  7.478 ms
+    72.14.237.201 (72.14.237.201)  6.797 ms *
+10  * * *
+11  * * *
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  * * *
+19  le-in-f101.1e100.net (74.125.205.101)  6.496 ms  6.357 ms  5.366 ms
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ host google.com
+google.com has address 64.233.165.101
+google.com has address 64.233.165.139
+google.com has address 64.233.165.100
+google.com has address 64.233.165.138
+google.com has address 64.233.165.102
+google.com has address 64.233.165.113
+google.com mail is handled by 50 alt4.aspmx.l.google.com.
+google.com mail is handled by 30 alt2.aspmx.l.google.com.
+google.com mail is handled by 10 aspmx.l.google.com.
+google.com mail is handled by 40 alt3.aspmx.l.google.com.
+google.com mail is handled by 20 alt1.aspmx.l.google.com.
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ dig google.com
+
+; <<>> DiG 9.10.6 <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 10360
+;; flags: qr rd ra; QUERY: 1, ANSWER: 6, AUTHORITY: 4, ADDITIONAL: 4
+
+;; QUESTION SECTION:
+;google.com.                    IN      A
+
+;; ANSWER SECTION:
+google.com.             248     IN      A       64.233.165.139
+google.com.             248     IN      A       64.233.165.100
+google.com.             248     IN      A       64.233.165.138
+google.com.             248     IN      A       64.233.165.102
+google.com.             248     IN      A       64.233.165.113
+google.com.             248     IN      A       64.233.165.101
+
+;; AUTHORITY SECTION:
+google.com.             136171  IN      NS      ns4.google.com.
+google.com.             136171  IN      NS      ns3.google.com.
+google.com.             136171  IN      NS      ns1.google.com.
+google.com.             136171  IN      NS      ns2.google.com.
+
+;; ADDITIONAL SECTION:
+ns4.google.com.         327976  IN      A       216.239.38.10
+ns3.google.com.         327976  IN      A       216.239.36.10
+ns1.google.com.         328025  IN      A       216.239.32.10
+ns2.google.com.         327976  IN      A       216.239.34.10
+
+;; Query time: 3 msec
+;; SERVER: 192.168.111.1#53(192.168.111.1)
+;; WHEN: Fri Oct 23 19:37:34 MSK 2020
+;; MSG SIZE  rcvd: 260
+
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ whois google.com
+% IANA WHOIS server
+% for more information on IANA, visit http://www.iana.org
+% This query returned 1 object
+
+refer:        whois.verisign-grs.com
+
+domain:       COM
+
+organisation: VeriSign Global Registry Services
+address:      12061 Bluemont Way
+address:      Reston Virginia 20190
+address:      United States
+
+contact:      administrative
+name:         Registry Customer Service
+organisation: VeriSign Global Registry Services
+address:      12061 Bluemont Way
+address:      Reston Virginia 20190
+address:      United States
+phone:        +1 703 925-6999
+fax-no:       +1 703 948 3978
+e-mail:       info@verisign-grs.com
+
+contact:      technical
+name:         Registry Customer Service
+organisation: VeriSign Global Registry Services
+address:      12061 Bluemont Way
+address:      Reston Virginia 20190
+address:      United States
+phone:        +1 703 925-6999
+fax-no:       +1 703 948 3978
+e-mail:       info@verisign-grs.com
+
+nserver:      A.GTLD-SERVERS.NET 192.5.6.30 2001:503:a83e:0:0:0:2:30
+nserver:      B.GTLD-SERVERS.NET 192.33.14.30 2001:503:231d:0:0:0:2:30
+nserver:      C.GTLD-SERVERS.NET 192.26.92.30 2001:503:83eb:0:0:0:0:30
+nserver:      D.GTLD-SERVERS.NET 192.31.80.30 2001:500:856e:0:0:0:0:30
+nserver:      E.GTLD-SERVERS.NET 192.12.94.30 2001:502:1ca1:0:0:0:0:30
+nserver:      F.GTLD-SERVERS.NET 192.35.51.30 2001:503:d414:0:0:0:0:30
+nserver:      G.GTLD-SERVERS.NET 192.42.93.30 2001:503:eea3:0:0:0:0:30
+nserver:      H.GTLD-SERVERS.NET 192.54.112.30 2001:502:8cc:0:0:0:0:30
+nserver:      I.GTLD-SERVERS.NET 192.43.172.30 2001:503:39c1:0:0:0:0:30
+nserver:      J.GTLD-SERVERS.NET 192.48.79.30 2001:502:7094:0:0:0:0:30
+nserver:      K.GTLD-SERVERS.NET 192.52.178.30 2001:503:d2d:0:0:0:0:30
+nserver:      L.GTLD-SERVERS.NET 192.41.162.30 2001:500:d937:0:0:0:0:30
+nserver:      M.GTLD-SERVERS.NET 192.55.83.30 2001:501:b1f9:0:0:0:0:30
+ds-rdata:     30909 8 2 E2D3C916F6DEEAC73294E8268FB5885044A833FC5459588F4A9184CFC41A5766
+
+whois:        whois.verisign-grs.com
+
+status:       ACTIVE
+remarks:      Registration information: http://www.verisigninc.com
+
+created:      1985-01-01
+changed:      2017-10-05
+source:       IANA
+
+# whois.verisign-grs.com
+
+   Domain Name: GOOGLE.COM
+   Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+   Registrar WHOIS Server: whois.markmonitor.com
+   Registrar URL: http://www.markmonitor.com
+   Updated Date: 2019-09-09T15:39:04Z
+   Creation Date: 1997-09-15T04:00:00Z
+   Registry Expiry Date: 2028-09-14T04:00:00Z
+   Registrar: MarkMonitor Inc.
+   Registrar IANA ID: 292
+   Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+   Registrar Abuse Contact Phone: +1.2083895740
+   Domain Status: clientDeleteProhibited https://icann.org/epp#clientDeleteProhibited
+   Domain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited
+   Domain Status: clientUpdateProhibited https://icann.org/epp#clientUpdateProhibited
+   Domain Status: serverDeleteProhibited https://icann.org/epp#serverDeleteProhibited
+   Domain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited
+   Domain Status: serverUpdateProhibited https://icann.org/epp#serverUpdateProhibited
+   Name Server: NS1.GOOGLE.COM
+   Name Server: NS2.GOOGLE.COM
+   Name Server: NS3.GOOGLE.COM
+   Name Server: NS4.GOOGLE.COM
+   DNSSEC: unsigned
+   URL of the ICANN Whois Inaccuracy Complaint Form: https://www.icann.org/wicf/
+>>> Last update of whois database: 2020-10-23T16:38:52Z <<<
+
+# whois.markmonitor.com
+
+Domain Name: google.com
+Registry Domain ID: 2138514_DOMAIN_COM-VRSN
+Registrar WHOIS Server: whois.markmonitor.com
+Registrar URL: http://www.markmonitor.com
+Updated Date: 2019-09-09T08:39:04-0700
+Creation Date: 1997-09-15T00:00:00-0700
+Registrar Registration Expiration Date: 2028-09-13T00:00:00-0700
+Registrar: MarkMonitor, Inc.
+Registrar IANA ID: 292
+Registrar Abuse Contact Email: abusecomplaints@markmonitor.com
+Registrar Abuse Contact Phone: +1.2083895770
+Domain Status: clientUpdateProhibited (https://www.icann.org/epp#clientUpdateProhibited)
+Domain Status: clientTransferProhibited (https://www.icann.org/epp#clientTransferProhibited)
+Domain Status: clientDeleteProhibited (https://www.icann.org/epp#clientDeleteProhibited)
+Domain Status: serverUpdateProhibited (https://www.icann.org/epp#serverUpdateProhibited)
+Domain Status: serverTransferProhibited (https://www.icann.org/epp#serverTransferProhibited)
+Domain Status: serverDeleteProhibited (https://www.icann.org/epp#serverDeleteProhibited)
+Registrant Organization: Google LLC
+Registrant State/Province: CA
+Registrant Country: US
+Registrant Email: Select Request Email Form at https://domains.markmonitor.com/whois/google.com
+Admin Organization: Google LLC
+Admin State/Province: CA
+Admin Country: US
+Admin Email: Select Request Email Form at https://domains.markmonitor.com/whois/google.com
+Tech Organization: Google LLC
+Tech State/Province: CA
+Tech Country: US
+Tech Email: Select Request Email Form at https://domains.markmonitor.com/whois/google.com
+Name Server: ns1.google.com
+Name Server: ns4.google.com
+Name Server: ns2.google.com
+Name Server: ns3.google.com
+DNSSEC: unsigned
+URL of the ICANN WHOIS Data Problem Reporting System: http://wdprs.internic.net/
+>>> Last update of WHOIS database: 2020-10-23T09:31:06-0700 <<<
+
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ nmap google.com
+bash: nmap: command not found
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ nmap google.com
+bash: nmap: command not found
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ tcpdump
+tcpdump: ioctl(SIOCIFCREATE): Operation not permitted
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ sudo tspdump
+Password:
+sudo: tspdump: command not found
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ sudo tcpdump
+tcpdump: data link type PKTAP
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on pktap, link-type PKTAP (Apple DLT_PKTAP), capture size 262144 bytes
+19:46:21.996638 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:22.508094 IP 145.33.211.130.bc.googleusercontent.com.https > 192.168.111.227.60501: Flags [P.], seq 1208755438:1208755469, ack 762094023, win 265, options [nop,nop,TS val 1500399027 ecr 654295138], length 31
+19:46:22.508142 IP 192.168.111.227.60501 > 145.33.211.130.bc.googleusercontent.com.https: Flags [.], ack 31, win 2047, options [nop,nop,TS val 654305016 ecr 1500399027], length 0
+19:46:22.508849 IP 192.168.111.227.60501 > 145.33.211.130.bc.googleusercontent.com.https: Flags [P.], seq 1:36, ack 31, win 2048, options [nop,nop,TS val 654305016 ecr 1500399027], length 35
+19:46:22.509638 IP 192.168.111.227.52310 > router.domain: 34233+ PTR? 145.33.211.130.in-addr.arpa. (45)
+19:46:22.514988 IP 145.33.211.130.bc.googleusercontent.com.https > 192.168.111.227.60501: Flags [.], ack 36, win 265, options [nop,nop,TS val 1500399059 ecr 654305016], length 0
+19:46:22.519825 IP router.domain > 192.168.111.227.52310: 34233 1/4/4 PTR 145.33.211.130.bc.googleusercontent.com. (292)
+19:46:22.521008 IP 192.168.111.227.51145 > router.domain: 9229+ PTR? 227.111.168.192.in-addr.arpa. (46)
+19:46:22.534314 IP router.domain > 192.168.111.227.51145: 9229 NXDomain 0/0/0 (46)
+19:46:23.942030 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [P.], seq 3938896416:3938897834, ack 804084875, win 266, options [nop,nop,TS val 3732451804 ecr 654283264], length 1418
+19:46:23.942039 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [.], seq 1418:2836, ack 1, win 266, options [nop,nop,TS val 3732451804 ecr 654283264], length 1418
+19:46:23.942041 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [P.], seq 2836:4254, ack 1, win 266, options [nop,nop,TS val 3732451804 ecr 654283264], length 1418
+19:46:23.942043 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [.], seq 4254:5672, ack 1, win 266, options [nop,nop,TS val 3732451805 ecr 654283264], length 1418
+19:46:23.942092 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 1418, win 2025, options [nop,nop,TS val 654306445 ecr 3732451804], length 0
+19:46:23.942134 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 4254, win 1981, options [nop,nop,TS val 654306445 ecr 3732451804], length 0
+19:46:23.942207 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [.], seq 5672:7090, ack 1, win 266, options [nop,nop,TS val 3732451805 ecr 654283264], length 1418
+19:46:23.942212 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [P.], seq 7090:7201, ack 1, win 266, options [nop,nop,TS val 3732451805 ecr 654283264], length 111
+19:46:23.942247 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 7201, win 1935, options [nop,nop,TS val 654306445 ecr 3732451805], length 0
+19:46:23.942433 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 7201, win 1979, options [nop,nop,TS val 654306445 ecr 3732451805], length 0
+19:46:23.942565 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 7201, win 2024, options [nop,nop,TS val 654306445 ecr 3732451805], length 0
+19:46:23.943101 IP 192.168.111.227.62862 > router.domain: 13313+ PTR? 47.224.186.35.in-addr.arpa. (44)
+19:46:23.952632 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:23.953908 IP router.domain > 192.168.111.227.62862: 13313 1/4/4 PTR 47.224.186.35.bc.googleusercontent.com. (290)
+19:46:24.145057 IP 192.168.111.227.51319 > ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https: Flags [P.], seq 3401051469:3401051525, ack 2655737543, win 2048, options [nop,nop,TS val 654306647 ecr 595502205], length 56
+19:46:24.145995 IP 192.168.111.227.57673 > router.domain: 38053+ PTR? 208.217.123.3.in-addr.arpa. (44)
+19:46:24.208948 IP router.domain > 192.168.111.227.57673: 38053 1/5/5 PTR ec2-3-123-217-208.eu-central-1.compute.amazonaws.com. (303)
+19:46:24.208954 IP ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https > 192.168.111.227.51319: Flags [.], ack 56, win 9, options [nop,nop,TS val 595503180 ecr 654306647], length 0
+19:46:24.209164 IP ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https > 192.168.111.227.51319: Flags [P.], seq 1:57, ack 56, win 9, options [nop,nop,TS val 595503180 ecr 654306647], length 56
+19:46:24.209189 IP 192.168.111.227.51319 > ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https: Flags [.], ack 57, win 2047, options [nop,nop,TS val 654306711 ecr 595503180], length 0
+19:46:24.368172 IP ec2-3-10-95-11.eu-west-2.compute.amazonaws.com.https > 192.168.111.227.60757: Flags [.], ack 210231643, win 9, options [nop,nop,TS val 306158568 ecr 654296859], length 0
+19:46:24.368221 IP 192.168.111.227.60757 > ec2-3-10-95-11.eu-west-2.compute.amazonaws.com.https: Flags [.], ack 1, win 2048, options [nop,nop,TS val 654306869 ecr 306148461], length 0
+19:46:24.369057 IP 192.168.111.227.57647 > router.domain: 35598+ PTR? 11.95.10.3.in-addr.arpa. (41)
+19:46:24.408811 IP router.domain > 192.168.111.227.57647: 35598 1/5/5 PTR ec2-3-10-95-11.eu-west-2.compute.amazonaws.com. (294)
+19:46:25.255798 IP 192.168.111.227.56549 > router.domain: 23307+ A? teams.office.com. (34)
+19:46:25.258458 IP ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https > 192.168.111.227.51319: Flags [P.], seq 57:1160, ack 56, win 9, options [nop,nop,TS val 595503423 ecr 654306711], length 1103
+19:46:25.258505 IP 192.168.111.227.51319 > ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https: Flags [.], ack 1160, win 2030, options [nop,nop,TS val 654307757 ecr 595503423], length 0
+19:46:25.264380 IP router.domain > 192.168.111.227.56549: 23307 3/13/13 CNAME teams-office-com.s-0005.s-msedge.net., CNAME s-0005.s-msedge.net., A 52.113.194.132 (543)
+19:46:25.265618 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [S], seq 3051678140, win 65535, options [mss 1460,nop,wscale 6,nop,nop,TS val 654307764 ecr 0,sackOK,eol], length 0
+19:46:25.266443 IP 192.168.111.227.54369 > router.domain: 35211+ PTR? 132.194.113.52.in-addr.arpa. (45)
+19:46:25.312223 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [S.], seq 1710137045, ack 3051678141, win 65535, options [mss 1440,nop,wscale 8,nop,nop,sackOK], length 0
+19:46:25.312277 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], ack 1, win 4096, length 0
+19:46:25.312541 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [P.], seq 1:518, ack 1, win 4096, length 517
+19:46:25.348915 IP router.domain > 192.168.111.227.54369: 35211 NXDomain 0/0/0 (45)
+19:46:25.360529 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [.], ack 518, win 2051, length 0
+19:46:25.360537 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [P.], seq 1:155, ack 518, win 2051, length 154
+19:46:25.360586 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], ack 155, win 4093, length 0
+19:46:25.360863 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [P.], seq 518:569, ack 155, win 4096, length 51
+19:46:25.361407 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [P.], seq 569:662, ack 155, win 4096, length 93
+19:46:25.362502 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], seq 662:2102, ack 155, win 4096, length 1440
+19:46:25.362521 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], seq 2102:3542, ack 155, win 4096, length 1440
+19:46:25.362530 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], seq 3542:4982, ack 155, win 4096, length 1440
+19:46:25.406868 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [.], ack 569, win 2050, length 0
+19:46:25.407113 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [P.], seq 155:224, ack 569, win 2050, length 69
+19:46:25.407118 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [.], ack 662, win 2050, length 0
+19:46:25.407149 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], seq 4982:5517, ack 224, win 4094, length 535
+19:46:25.409062 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [P.], seq 224:262, ack 2102, win 2053, length 38
+19:46:25.409108 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [P.], seq 5517:6877, ack 262, win 4095, length 1360
+19:46:25.409531 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [.], ack 3542, win 2047, length 0
+19:46:25.411069 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [.], ack 4982, win 2053, length 0
+19:46:25.454610 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [.], ack 5517, win 2051, length 0
+19:46:25.455935 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [.], ack 6877, win 2053, length 0
+19:46:25.508618 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [P.], seq 262:587, ack 6877, win 2053, length 325
+19:46:25.508626 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [P.], seq 587:789, ack 6877, win 2053, length 202
+19:46:25.508629 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [P.], seq 789:827, ack 6877, win 2053, length 38
+19:46:25.508677 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], ack 587, win 4090, length 0
+19:46:25.508709 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], ack 789, win 4087, length 0
+19:46:25.508723 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], ack 827, win 4087, length 0
+19:46:25.887422 IP 52.113.194.132.https > 192.168.111.227.60771: Flags [P.], seq 789:827, ack 6877, win 2053, length 38
+19:46:25.887461 IP 192.168.111.227.60771 > 52.113.194.132.https: Flags [.], ack 827, win 4096, options [nop,nop,sack 1 {789:827}], length 0
+19:46:25.892928 IP 149.154.167.50.https > 192.168.111.227.59611: Flags [P.], seq 1536469759:1536469864, ack 1008909274, win 32768, options [nop,nop,TS val 2108266648 ecr 654301228], length 105
+19:46:25.892978 IP 192.168.111.227.59611 > 149.154.167.50.https: Flags [.], ack 105, win 2046, options [nop,nop,TS val 654308385 ecr 2108266648], length 0
+19:46:25.893491 IP 192.168.111.227.59611 > 149.154.167.50.https: Flags [P.], seq 1:154, ack 105, win 2048, options [nop,nop,TS val 654308385 ecr 2108266648], length 153
+19:46:25.893978 IP 192.168.111.227.58707 > router.domain: 5857+ PTR? 50.167.154.149.in-addr.arpa. (45)
+19:46:25.895988 IP router.domain > 192.168.111.227.58707: 5857 NXDomain 0/0/0 (45)
+19:46:25.945079 IP 149.154.167.50.https > 192.168.111.227.59611: Flags [.], ack 154, win 32768, options [nop,nop,TS val 2108266661 ecr 654308385], length 0
+19:46:25.945088 IP 149.154.167.50.https > 192.168.111.227.59611: Flags [P.], seq 105:194, ack 154, win 32768, options [nop,nop,TS val 2108266661 ecr 654308385], length 89
+19:46:25.945139 IP 192.168.111.227.59611 > 149.154.167.50.https: Flags [.], ack 194, win 2046, options [nop,nop,TS val 654308436 ecr 2108266661], length 0
+19:46:25.954756 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:26.005923 IP 149.154.167.50.https > 192.168.111.227.59611: Flags [P.], seq 194:299, ack 154, win 32768, options [nop,nop,TS val 2108266676 ecr 654308436], length 105
+19:46:26.005974 IP 192.168.111.227.59611 > 149.154.167.50.https: Flags [.], ack 299, win 2046, options [nop,nop,TS val 654308496 ecr 2108266676], length 0
+19:46:28.045093 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:28.311575 IP 192.168.111.227.51124 > lo-in-f188.1e100.net.https: Flags [.], ack 935166770, win 2048, length 0
+19:46:28.375121 IP lo-in-f188.1e100.net.https > 192.168.111.227.51124: Flags [.], ack 1, win 265, options [nop,nop,TS val 2288386732 ecr 653723908], length 0
+19:46:28.857213 IP vip02.am4.lb.opera.technology.https > 192.168.111.227.60759: Flags [P.], seq 1639708463:1639708494, ack 1655449974, win 61, options [nop,nop,TS val 1757177549 ecr 654268123], length 31
+19:46:28.857221 IP vip02.am4.lb.opera.technology.https > 192.168.111.227.60759: Flags [F.], seq 31, ack 1, win 61, options [nop,nop,TS val 1757177549 ecr 654268123], length 0
+19:46:28.857265 IP 192.168.111.227.60759 > vip02.am4.lb.opera.technology.https: Flags [.], ack 31, win 2051, options [nop,nop,TS val 654311344 ecr 1757177549], length 0
+19:46:28.857289 IP 192.168.111.227.60759 > vip02.am4.lb.opera.technology.https: Flags [.], ack 32, win 2051, options [nop,nop,TS val 654311344 ecr 1757177549], length 0
+19:46:28.858125 IP 192.168.111.227.50211 > router.domain: 16057+ PTR? 16.216.145.82.in-addr.arpa. (44)
+19:46:28.919692 IP router.domain > 192.168.111.227.50211: 16057 1/4/4 PTR vip02.am4.lb.opera.technology. (236)
+19:46:29.983388 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:30.582842 IP 192.168.111.227.60760 > text-lb.esams.wikimedia.org.https: Flags [.], ack 4250056053, win 2059, length 0
+19:46:30.643633 IP text-lb.esams.wikimedia.org.https > 192.168.111.227.60760: Flags [.], ack 1, win 84, options [nop,nop,TS val 2811071365 ecr 654268069], length 0
+19:46:31.670993 IP 192.168.111.227.60596 > text-lb.esams.wikimedia.org.https: Flags [.], ack 738065216, win 2248, length 0
+19:46:31.717886 IP text-lb.esams.wikimedia.org.https > 192.168.111.227.60596: Flags [.], ack 1, win 83, options [nop,nop,TS val 2811072437 ecr 654269156], length 0
+19:46:32.031808 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:32.619770 IP 145.33.211.130.bc.googleusercontent.com.https > 192.168.111.227.60501: Flags [P.], seq 31:62, ack 36, win 265, options [nop,nop,TS val 1500409027 ecr 654305016], length 31
+19:46:32.619819 IP 192.168.111.227.60501 > 145.33.211.130.bc.googleusercontent.com.https: Flags [.], ack 62, win 2047, options [nop,nop,TS val 654315103 ecr 1500409027], length 0
+19:46:32.620445 IP 192.168.111.227.60501 > 145.33.211.130.bc.googleusercontent.com.https: Flags [P.], seq 36:71, ack 62, win 2048, options [nop,nop,TS val 654315103 ecr 1500409027], length 35
+19:46:32.631567 IP 145.33.211.130.bc.googleusercontent.com.https > 192.168.111.227.60501: Flags [.], ack 71, win 265, options [nop,nop,TS val 1500409171 ecr 654315103], length 0
+19:46:33.083772 IP 192.168.111.227.57621 > 192.168.111.255.57621: UDP, length 44
+19:46:33.084626 IP 192.168.111.227.51336 > router.domain: 64723+ PTR? 255.111.168.192.in-addr.arpa. (46)
+19:46:33.087990 IP router.domain > 192.168.111.227.51336: 64723 NXDomain 0/0/0 (46)
+19:46:33.772200 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60767: Flags [P.], seq 393826528:393826977, ack 4243299040, win 59, options [nop,nop,TS val 210633474 ecr 654291339], length 449
+19:46:33.772209 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60767: Flags [FP.], seq 449:480, ack 1, win 59, options [nop,nop,TS val 210633474 ecr 654291339], length 31
+19:46:33.772211 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60767: Flags [FP.], seq 449:480, ack 1, win 59, options [nop,nop,TS val 210633479 ecr 654291339], length 31
+19:46:33.772255 IP 192.168.111.227.60767 > srv193-139-240-87.vk.com.https: Flags [.], ack 449, win 2040, options [nop,nop,TS val 654316250 ecr 210633474], length 0
+19:46:33.772293 IP 192.168.111.227.60767 > srv193-139-240-87.vk.com.https: Flags [.], ack 481, win 2040, options [nop,nop,TS val 654316250 ecr 210633474], length 0
+19:46:33.772305 IP 192.168.111.227.60767 > srv193-139-240-87.vk.com.https: Flags [.], ack 481, win 2040, options [nop,nop,TS val 654316250 ecr 210633474,nop,nop,sack 1 {449:480}], length 0
+19:46:33.772895 IP 192.168.111.227.60767 > srv193-139-240-87.vk.com.https: Flags [F.], seq 1, ack 481, win 2048, options [nop,nop,TS val 654316250 ecr 210633474], length 0
+19:46:33.776426 IP 192.168.111.227.60772 > srv193-139-240-87.vk.com.https: Flags [S], seq 2259207272, win 65535, options [mss 1460,nop,wscale 6,nop,nop,TS val 654316254 ecr 0,sackOK,eol], length 0
+19:46:33.776832 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60767: Flags [.], ack 2, win 59, options [nop,nop,TS val 210633484 ecr 654316250], length 0
+19:46:33.780095 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60772: Flags [S.], seq 4109625562, ack 2259207273, win 27960, options [mss 1410,sackOK,TS val 210633485 ecr 654316254,nop,wscale 9], length 0
+19:46:33.780147 IP 192.168.111.227.60772 > srv193-139-240-87.vk.com.https: Flags [.], ack 1, win 2053, options [nop,nop,TS val 654316257 ecr 210633485], length 0
+19:46:33.780437 IP 192.168.111.227.60772 > srv193-139-240-87.vk.com.https: Flags [P.], seq 1:232, ack 1, win 2053, options [nop,nop,TS val 654316257 ecr 210633485], length 231
+19:46:33.783583 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60772: Flags [.], ack 232, win 57, options [nop,nop,TS val 210633486 ecr 654316257], length 0
+19:46:33.783593 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60772: Flags [.], seq 1:1449, ack 232, win 57, options [nop,nop,TS val 210633486 ecr 654316257], length 1448
+19:46:33.784092 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60772: Flags [.], seq 1449:2897, ack 232, win 57, options [nop,nop,TS val 210633486 ecr 654316257], length 1448
+19:46:33.784136 IP 192.168.111.227.60772 > srv193-139-240-87.vk.com.https: Flags [.], ack 2897, win 2025, options [nop,nop,TS val 654316260 ecr 210633486], length 0
+19:46:33.784360 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60772: Flags [P.], seq 2897:3940, ack 232, win 57, options [nop,nop,TS val 210633486 ecr 654316257], length 1043
+19:46:33.784394 IP 192.168.111.227.60772 > srv193-139-240-87.vk.com.https: Flags [.], ack 3940, win 2009, options [nop,nop,TS val 654316260 ecr 210633486], length 0
+19:46:33.789261 IP 192.168.111.227.60772 > srv193-139-240-87.vk.com.https: Flags [P.], seq 232:325, ack 3940, win 2048, options [nop,nop,TS val 654316265 ecr 210633486], length 93
+19:46:33.792714 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60772: Flags [P.], seq 3940:3991, ack 325, win 57, options [nop,nop,TS val 210633488 ecr 654316265], length 51
+19:46:33.792749 IP 192.168.111.227.60772 > srv193-139-240-87.vk.com.https: Flags [.], ack 3991, win 2047, options [nop,nop,TS val 654316268 ecr 210633488], length 0
+19:46:33.794579 IP 192.168.111.227.60772 > srv193-139-240-87.vk.com.https: Flags [P.], seq 325:672, ack 3991, win 2048, options [nop,nop,TS val 654316269 ecr 210633488], length 347
+19:46:33.841016 IP 192.168.111.227.60772 > srv193-139-240-87.vk.com.https: Flags [P.], seq 325:672, ack 3991, win 2048, options [nop,nop,TS val 654316314 ecr 210633488], length 347
+19:46:33.844102 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60772: Flags [.], ack 672, win 59, options [nop,nop,TS val 210633501 ecr 654316314,nop,nop,sack 1 {325:672}], length 0
+19:46:33.906237 IP 192.168.111.227.60764 > a2-21-198-224.deploy.static.akamaitechnologies.com.https: Flags [.], ack 2708464032, win 2048, length 0
+19:46:33.906995 IP 192.168.111.227.51319 > ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https: Flags [P.], seq 56:112, ack 1160, win 2048, options [nop,nop,TS val 654316379 ecr 595503423], length 56
+19:46:33.907767 IP 192.168.111.227.53043 > router.domain: 44684+ PTR? 224.198.21.2.in-addr.arpa. (43)
+19:46:33.923763 IP a2-21-198-224.deploy.static.akamaitechnologies.com.https > 192.168.111.227.60764: Flags [.], ack 1, win 243, options [nop,nop,TS val 3139684174 ecr 654271378], length 0
+19:46:33.958122 IP ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https > 192.168.111.227.51319: Flags [P.], seq 1160:1216, ack 112, win 9, options [nop,nop,TS val 595505621 ecr 654316379], length 56
+19:46:33.958169 IP 192.168.111.227.51319 > ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https: Flags [.], ack 1216, win 2047, options [nop,nop,TS val 654316430 ecr 595505621], length 0
+19:46:33.963477 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:33.971452 IP router.domain > 192.168.111.227.53043: 44684 1/8/8 PTR a2-21-198-224.deploy.static.akamaitechnologies.com. (394)
+19:46:34.501047 IP ec2-3-10-95-11.eu-west-2.compute.amazonaws.com.https > 192.168.111.227.60757: Flags [.], ack 1, win 9, options [nop,nop,TS val 306161079 ecr 654306869], length 0
+19:46:34.501101 IP 192.168.111.227.60757 > ec2-3-10-95-11.eu-west-2.compute.amazonaws.com.https: Flags [.], ack 1, win 2048, options [nop,nop,TS val 654316971 ecr 306148461], length 0
+19:46:34.556750 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [P.], seq 7201:8619, ack 1, win 266, options [nop,nop,TS val 3732462430 ecr 654306445], length 1418
+19:46:34.556759 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [.], seq 8619:10037, ack 1, win 266, options [nop,nop,TS val 3732462430 ecr 654306445], length 1418
+19:46:34.556805 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 8619, win 2025, options [nop,nop,TS val 654317025 ecr 3732462430], length 0
+19:46:34.557027 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 10037, win 2048, options [nop,nop,TS val 654317025 ecr 3732462430], length 0
+19:46:34.557090 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [P.], seq 10037:11455, ack 1, win 266, options [nop,nop,TS val 3732462430 ecr 654306445], length 1418
+19:46:34.557116 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 11455, win 2025, options [nop,nop,TS val 654317025 ecr 3732462430], length 0
+19:46:34.558546 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [P.], seq 11455:12873, ack 1, win 266, options [nop,nop,TS val 3732462431 ecr 654306445], length 1418
+19:46:34.558555 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [.], seq 12873:14291, ack 1, win 266, options [nop,nop,TS val 3732462431 ecr 654306445], length 1418
+19:46:34.558558 IP 47.224.186.35.bc.googleusercontent.com.https > 192.168.111.227.59489: Flags [P.], seq 14291:14402, ack 1, win 266, options [nop,nop,TS val 3732462431 ecr 654306445], length 111
+19:46:34.558603 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 12873, win 2025, options [nop,nop,TS val 654317026 ecr 3732462431], length 0
+19:46:34.558653 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 14402, win 2001, options [nop,nop,TS val 654317026 ecr 3732462431], length 0
+19:46:34.558877 IP 192.168.111.227.59489 > 47.224.186.35.bc.googleusercontent.com.https: Flags [.], ack 14402, win 2046, options [nop,nop,TS val 654317026 ecr 3732462431], length 0
+19:46:36.025079 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:37.255871 ARP, Request who-has 192.168.111.227 tell router, length 28
+19:46:37.255891 ARP, Reply 192.168.111.227 is-at 64:76:ba:ac:05:92 (oui Unknown), length 28
+19:46:37.341201 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60770: Flags [P.], seq 1217120996:1217121478, ack 28279165, win 59, options [nop,nop,TS val 210634369 ecr 654302225], length 482
+19:46:37.341209 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60770: Flags [FP.], seq 482:513, ack 1, win 59, options [nop,nop,TS val 210634369 ecr 654302225], length 31
+19:46:37.341258 IP 192.168.111.227.60770 > srv193-139-240-87.vk.com.https: Flags [.], ack 482, win 2040, options [nop,nop,TS val 654319806 ecr 210634369], length 0
+19:46:37.341294 IP 192.168.111.227.60770 > srv193-139-240-87.vk.com.https: Flags [.], ack 514, win 2039, options [nop,nop,TS val 654319806 ecr 210634369], length 0
+19:46:37.341593 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60770: Flags [FP.], seq 482:513, ack 1, win 59, options [nop,nop,TS val 210634374 ecr 654302225], length 31
+19:46:37.341614 IP 192.168.111.227.60770 > srv193-139-240-87.vk.com.https: Flags [.], ack 514, win 2048, options [nop,nop,TS val 654319806 ecr 210634369,nop,nop,sack 1 {482:513}], length 0
+19:46:37.343356 IP 192.168.111.227.60770 > srv193-139-240-87.vk.com.https: Flags [F.], seq 1, ack 514, win 2048, options [nop,nop,TS val 654319808 ecr 210634369], length 0
+19:46:37.346068 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60770: Flags [.], ack 2, win 59, options [nop,nop,TS val 210634377 ecr 654319808], length 0
+19:46:37.347676 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [S], seq 631387553, win 65535, options [mss 1460,nop,wscale 6,nop,nop,TS val 654319811 ecr 0,sackOK,eol], length 0
+19:46:37.355373 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [S.], seq 3647702327, ack 631387554, win 27960, options [mss 1410,sackOK,TS val 210634378 ecr 654319811,nop,wscale 9], length 0
+19:46:37.355428 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [.], ack 1, win 2053, options [nop,nop,TS val 654319818 ecr 210634378], length 0
+19:46:37.356009 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [P.], seq 1:232, ack 1, win 2053, options [nop,nop,TS val 654319818 ecr 210634378], length 231
+19:46:37.361007 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [.], ack 232, win 57, options [nop,nop,TS val 210634380 ecr 654319818], length 0
+19:46:37.361409 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [.], seq 1:1449, ack 232, win 57, options [nop,nop,TS val 210634380 ecr 654319818], length 1448
+19:46:37.361761 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [.], seq 1449:2897, ack 232, win 57, options [nop,nop,TS val 210634380 ecr 654319818], length 1448
+19:46:37.361809 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [.], ack 2897, win 2008, options [nop,nop,TS val 654319823 ecr 210634380], length 0
+19:46:37.362721 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [P.], seq 2897:3940, ack 232, win 57, options [nop,nop,TS val 210634380 ecr 654319818], length 1043
+19:46:37.362743 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [.], ack 3940, win 2031, options [nop,nop,TS val 654319824 ecr 210634380], length 0
+19:46:37.367558 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [P.], seq 232:325, ack 3940, win 2048, options [nop,nop,TS val 654319828 ecr 210634380], length 93
+19:46:37.371052 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [P.], seq 3940:3991, ack 325, win 57, options [nop,nop,TS val 210634383 ecr 654319828], length 51
+19:46:37.371101 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [.], ack 3991, win 2047, options [nop,nop,TS val 654319832 ecr 210634383], length 0
+19:46:37.373297 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [P.], seq 325:671, ack 3991, win 2048, options [nop,nop,TS val 654319834 ecr 210634383], length 346
+19:46:37.417728 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [.], ack 671, win 59, options [nop,nop,TS val 210634395 ecr 654319834], length 0
+19:46:38.072718 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:39.004575 IP 192.168.111.225 > 224.0.0.251: igmp v2 report 224.0.0.251
+19:46:39.005458 IP 192.168.111.227.54126 > router.domain: 31951+ PTR? 225.111.168.192.in-addr.arpa. (46)
+19:46:39.009025 IP router.domain > 192.168.111.227.54126: 31951 NXDomain 0/0/0 (46)
+19:46:39.010545 IP 192.168.111.227.52645 > router.domain: 30151+ PTR? 251.0.0.224.in-addr.arpa. (42)
+19:46:39.013758 IP router.domain > 192.168.111.227.52645: 30151 NXDomain 0/0/0 (42)
+19:46:39.067463 IP 52.114.88.63.https > 192.168.111.227.58836: Flags [P.], seq 1098672710:1098673330, ack 1196214125, win 2050, length 620
+19:46:39.067511 IP 192.168.111.227.58836 > 52.114.88.63.https: Flags [.], ack 620, win 4086, length 0
+19:46:39.068561 IP 192.168.111.227.54541 > router.domain: 758+ PTR? 63.88.114.52.in-addr.arpa. (43)
+19:46:39.086882 IP 192.168.111.227.58836 > 52.114.88.63.https: Flags [P.], seq 1:219, ack 620, win 4096, length 218
+19:46:39.184696 IP router.domain > 192.168.111.227.54541: 758 NXDomain 0/0/0 (43)
+19:46:39.205843 IP 52.114.88.63.https > 192.168.111.227.58836: Flags [.], ack 219, win 2050, length 0
+19:46:39.556414 IP 192.168.111.227.51115 > 127.64.199.104.bc.googleusercontent.com.4070: Flags [P.], seq 2523991622:2523991633, ack 2761474656, win 2048, options [nop,nop,TS val 654322010 ecr 1695879595], length 11
+19:46:39.557398 IP 192.168.111.227.51271 > router.domain: 39064+ PTR? 127.64.199.104.in-addr.arpa. (45)
+19:46:39.567872 IP router.domain > 192.168.111.227.51271: 39064 1/4/4 PTR 127.64.199.104.bc.googleusercontent.com. (292)
+19:46:39.610896 IP 127.64.199.104.bc.googleusercontent.com.4070 > 192.168.111.227.51115: Flags [P.], seq 1:12, ack 11, win 16, options [nop,nop,TS val 1695939731 ecr 654322010], length 11
+19:46:39.610946 IP 192.168.111.227.51115 > 127.64.199.104.bc.googleusercontent.com.4070: Flags [.], ack 12, win 2047, options [nop,nop,TS val 654322064 ecr 1695939731], length 0
+19:46:40.018427 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:40.213391 IP 192.168.111.227.51319 > ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https: Flags [P.], seq 112:170, ack 1216, win 2048, options [nop,nop,TS val 654322664 ecr 595505621], length 58
+19:46:40.297934 IP ec2-3-123-217-208.eu-central-1.compute.amazonaws.com.https > 192.168.111.227.51319: Flags [.], ack 170, win 9, options [nop,nop,TS val 595507207 ecr 654322664], length 0
+19:46:41.152896 IP 149.154.167.50.https > 192.168.111.227.59611: Flags [P.], seq 299:404, ack 154, win 32768, options [nop,nop,TS val 2108270451 ecr 654308496], length 105
+19:46:41.152944 IP 192.168.111.227.59611 > 149.154.167.50.https: Flags [.], ack 404, win 2046, options [nop,nop,TS val 654323600 ecr 2108270451], length 0
+19:46:41.153574 IP 192.168.111.227.59611 > 149.154.167.50.https: Flags [P.], seq 154:259, ack 404, win 2048, options [nop,nop,TS val 654323600 ecr 2108270451], length 105
+19:46:41.247634 IP 149.154.167.50.https > 192.168.111.227.59611: Flags [.], ack 259, win 32768, options [nop,nop,TS val 2108270488 ecr 654323600], length 0
+19:46:41.397579 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [P.], seq 3991:4473, ack 671, win 59, options [nop,nop,TS val 210635390 ecr 654319834], length 482
+19:46:41.397587 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [FP.], seq 4473:4504, ack 671, win 59, options [nop,nop,TS val 210635390 ecr 654319834], length 31
+19:46:41.397628 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [.], ack 4473, win 2040, options [nop,nop,TS val 654323843 ecr 210635390], length 0
+19:46:41.397663 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [.], ack 4505, win 2039, options [nop,nop,TS val 654323843 ecr 210635390], length 0
+19:46:41.400114 IP 192.168.111.227.60773 > srv193-139-240-87.vk.com.https: Flags [F.], seq 671, ack 4505, win 2048, options [nop,nop,TS val 654323845 ecr 210635390], length 0
+19:46:41.403097 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [S], seq 3381836251, win 65535, options [mss 1460,nop,wscale 6,nop,nop,TS val 654323847 ecr 0,sackOK,eol], length 0
+19:46:41.404027 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60773: Flags [.], ack 672, win 59, options [nop,nop,TS val 210635391 ecr 654323845], length 0
+19:46:41.407443 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [S.], seq 3685119819, ack 3381836252, win 27960, options [mss 1410,sackOK,TS val 210635392 ecr 654323847,nop,wscale 9], length 0
+19:46:41.407517 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [.], ack 1, win 2053, options [nop,nop,TS val 654323851 ecr 210635392], length 0
+19:46:41.407928 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [P.], seq 1:232, ack 1, win 2053, options [nop,nop,TS val 654323851 ecr 210635392], length 231
+19:46:41.411752 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [.], ack 232, win 57, options [nop,nop,TS val 210635393 ecr 654323851], length 0
+19:46:41.412654 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [.], seq 1:1449, ack 232, win 57, options [nop,nop,TS val 210635393 ecr 654323851], length 1448
+19:46:41.412990 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [.], seq 1449:2897, ack 232, win 57, options [nop,nop,TS val 210635393 ecr 654323851], length 1448
+19:46:41.413095 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [.], ack 2897, win 2008, options [nop,nop,TS val 654323856 ecr 210635393], length 0
+19:46:41.413306 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [P.], seq 2897:3939, ack 232, win 57, options [nop,nop,TS val 210635393 ecr 654323851], length 1042
+19:46:41.413353 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [.], ack 3939, win 2031, options [nop,nop,TS val 654323856 ecr 210635393], length 0
+19:46:41.417646 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [P.], seq 232:325, ack 3939, win 2048, options [nop,nop,TS val 654323860 ecr 210635393], length 93
+19:46:41.420201 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [P.], seq 3939:3990, ack 325, win 57, options [nop,nop,TS val 210635395 ecr 654323860], length 51
+19:46:41.420229 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [.], ack 3990, win 2047, options [nop,nop,TS val 654323862 ecr 210635395], length 0
+19:46:41.421629 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [P.], seq 325:671, ack 3990, win 2048, options [nop,nop,TS val 654323863 ecr 210635395], length 346
+19:46:41.464894 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [.], ack 671, win 59, options [nop,nop,TS val 210635407 ecr 654323863], length 0
+19:46:42.068585 STP 802.1w, Rapid STP, Flags [Learn, Forward], bridge-id 8000.64:d1:54:40:fd:54.8001, length 36
+19:46:42.421095 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [P.], seq 3990:4478, ack 671, win 59, options [nop,nop,TS val 210635625 ecr 654323863], length 488
+19:46:42.421105 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [FP.], seq 4478:4509, ack 671, win 59, options [nop,nop,TS val 210635625 ecr 654323863], length 31
+19:46:42.421107 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [FP.], seq 4478:4509, ack 671, win 59, options [nop,nop,TS val 210635629 ecr 654323863], length 31
+19:46:42.421143 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [.], ack 4478, win 2040, options [nop,nop,TS val 654324858 ecr 210635625], length 0
+19:46:42.421176 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [.], ack 4510, win 2039, options [nop,nop,TS val 654324858 ecr 210635625], length 0
+19:46:42.421189 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [.], ack 4510, win 2039, options [nop,nop,TS val 654324858 ecr 210635625,nop,nop,sack 1 {4478:4509}], length 0
+19:46:42.425771 IP 192.168.111.227.60774 > srv193-139-240-87.vk.com.https: Flags [F.], seq 671, ack 4510, win 2048, options [nop,nop,TS val 654324862 ecr 210635625], length 0
+19:46:42.429165 IP 192.168.111.227.60775 > srv193-139-240-87.vk.com.https: Flags [S], seq 4050513661, win 65535, options [mss 1460,nop,wscale 6,nop,nop,TS val 654324865 ecr 0,sackOK,eol], length 0
+19:46:42.440385 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60774: Flags [.], ack 672, win 59, options [nop,nop,TS val 210635650 ecr 654324862], length 0
+19:46:42.440788 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60775: Flags [S.], seq 2261628020, ack 4050513662, win 27960, options [mss 1410,sackOK,TS val 210635651 ecr 654324865,nop,wscale 9], length 0
+19:46:42.440834 IP 192.168.111.227.60775 > srv193-139-240-87.vk.com.https: Flags [.], ack 1, win 2053, options [nop,nop,TS val 654324876 ecr 210635651], length 0
+19:46:42.441087 IP 192.168.111.227.60775 > srv193-139-240-87.vk.com.https: Flags [P.], seq 1:232, ack 1, win 2053, options [nop,nop,TS val 654324876 ecr 210635651], length 231
+19:46:42.443672 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60775: Flags [.], ack 232, win 57, options [nop,nop,TS val 210635651 ecr 654324876], length 0
+19:46:42.455028 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60775: Flags [.], seq 1:1449, ack 232, win 57, options [nop,nop,TS val 210635651 ecr 654324876], length 1448
+19:46:42.516762 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60775: Flags [.], seq 1449:2897, ack 232, win 57, options [nop,nop,TS val 210635651 ecr 654324876], length 1448
+19:46:42.516773 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60775: Flags [P.], seq 2897:3938, ack 232, win 57, options [nop,nop,TS val 210635651 ecr 654324876], length 1041
+19:46:42.516832 IP 192.168.111.227.60775 > srv193-139-240-87.vk.com.https: Flags [.], ack 2897, win 2025, options [nop,nop,TS val 654324951 ecr 210635651], length 0
+19:46:42.516868 IP 192.168.111.227.60775 > srv193-139-240-87.vk.com.https: Flags [.], ack 3938, win 2009, options [nop,nop,TS val 654324951 ecr 210635651], length 0
+19:46:42.516875 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60775: Flags [P.], seq 2897:3938, ack 232, win 57, options [nop,nop,TS val 210635655 ecr 654324876], length 1041
+19:46:42.516880 IP 145.33.211.130.bc.googleusercontent.com.https > 192.168.111.227.60501: Flags [P.], seq 62:93, ack 71, win 265, options [nop,nop,TS val 1500419027 ecr 654315103], length 31
+19:46:42.516897 IP 192.168.111.227.60775 > srv193-139-240-87.vk.com.https: Flags [.], ack 3938, win 2009, options [nop,nop,TS val 654324951 ecr 210635655,nop,nop,sack 1 {2897:3938}], length 0
+19:46:42.516923 IP 192.168.111.227.60501 > 145.33.211.130.bc.googleusercontent.com.https: Flags [.], ack 93, win 2047, options [nop,nop,TS val 654324951 ecr 1500419027], length 0
+19:46:42.517944 IP 192.168.111.227.60501 > 145.33.211.130.bc.googleusercontent.com.https: Flags [P.], seq 71:106, ack 93, win 2048, options [nop,nop,TS val 654324952 ecr 1500419027], length 35
+19:46:42.522447 IP 192.168.111.227.60775 > srv193-139-240-87.vk.com.https: Flags [P.], seq 232:325, ack 3938, win 2048, options [nop,nop,TS val 654324956 ecr 210635655], length 93
+19:46:42.526894 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60775: Flags [P.], seq 3938:3989, ack 325, win 57, options [nop,nop,TS val 210635672 ecr 654324956], length 51
+19:46:42.526936 IP 192.168.111.227.60775 > srv193-139-240-87.vk.com.https: Flags [.], ack 3989, win 2047, options [nop,nop,TS val 654324960 ecr 210635672], length 0
+19:46:42.527646 IP 145.33.211.130.bc.googleusercontent.com.https > 192.168.111.227.60501: Flags [.], ack 106, win 265, options [nop,nop,TS val 1500419071 ecr 654324952], length 0
+19:46:42.528584 IP 192.168.111.227.60775 > srv193-139-240-87.vk.com.https: Flags [P.], seq 325:671, ack 3989, win 2048, options [nop,nop,TS val 654324961 ecr 210635672], length 346
+19:46:42.572643 IP srv193-139-240-87.vk.com.https > 192.168.111.227.60775: Flags [.], ack 671, win 59, options [nop,nop,TS val 210635684 ecr 654324961], length 0
+^C
+249 packets captured
+249 packets received by filter
+0 packets dropped by kernel
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ tcpdump host google.com
+tcpdump: ioctl(SIOCIFCREATE): Operation not permitted
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ sudo tcpdump host google.com
+tcpdump: data link type PKTAP
+tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
+listening on pktap, link-type PKTAP (Apple DLT_PKTAP), capture size 262144 bytes
+^C
+0 packets captured
+2336 packets received by filter
+0 packets dropped by kernel
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ wget google.com
+bash: wget: command not found
+(venv) Vladimirs-MacBook-Air:task02 vladimir$ curl google.com
+<HTML><HEAD><meta http-equiv="content-type" content="text/html;charset=utf-8">
+<TITLE>301 Moved</TITLE></HEAD><BODY>
+<H1>301 Moved</H1>
+The document has moved
+<A HREF="http://www.google.com/">here</A>.
+</BODY></HTML>
+(venv) Vladimirs-MacBook-Air:task02 vladimir$
