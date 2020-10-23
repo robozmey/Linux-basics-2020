@@ -1,0 +1,15 @@
+(venv) Vladimirs-MacBook-Air:linux-basics-2020 vladimir$ traceroute www.ubuntu.com
+traceroute: Warning: www.ubuntu.com has multiple addresses; using 91.189.88.181
+traceroute to www.ubuntu.com (91.189.88.181), 64 hops max, 52 byte packets
+ 1  router (192.168.111.1)  6.795 ms  1.026 ms  0.876 ms
+ 2  vlan591.schevchenko.bb.pu.ru (81.89.176.1)  1.792 ms  9.566 ms  5.902 ms
+ 3  vlan3.kronos.pu.ru (195.70.196.3)  1.776 ms  1.453 ms  1.482 ms
+ 4  195.70.206.129 (195.70.206.129)  1.754 ms  2.354 ms  1.299 ms
+ 5  185.1.152.59 (185.1.152.59)  14.948 ms  12.723 ms  12.625 ms
+ 6  100ge8-2.core1.tll1.he.net (184.104.192.93)  40.334 ms  22.763 ms  26.044 ms
+ 7  100ge9-2.core1.sto1.he.net (184.104.192.81)  28.369 ms  33.084 ms  27.899 ms
+ 8  100ge8-2.core1.ams1.he.net (184.105.65.125)  46.948 ms * *
+ 9  100ge0-54.core1.ams2.he.net (184.104.192.130)  53.330 ms  49.097 ms  48.434 ms
+10  100ge0-31.core2.lon3.he.net (184.104.193.193)  54.226 ms  52.720 ms  54.551 ms
+11  184.104.203.50 (184.104.203.50)  52.301 ms  55.486 ms  52.268 ms
+12  davybones.canonical.com (91.189.88.181)  51.593 ms  51.886 ms  53.014 ms

@@ -1,0 +1,28 @@
+(venv) Vladimirs-MacBook-Air:linux-basics-2020 vladimir$ ping 8.8.8.8
+PING 8.8.8.8 (8.8.8.8): 56 data bytes
+64 bytes from 8.8.8.8: icmp_seq=0 ttl=111 time=6.306 ms
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=111 time=6.889 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=111 time=8.240 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=111 time=13.042 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=111 time=16.697 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=111 time=6.241 ms
+64 bytes from 8.8.8.8: icmp_seq=6 ttl=111 time=8.072 ms
+64 bytes from 8.8.8.8: icmp_seq=7 ttl=111 time=5.892 ms
+64 bytes from 8.8.8.8: icmp_seq=8 ttl=111 time=8.328 ms
+^C
+--- 8.8.8.8 ping statistics ---
+9 packets transmitted, 9 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 5.892/8.856/16.697/3.436 ms
+(venv) Vladimirs-MacBook-Air:linux-basics-2020 vladimir$ ping http://www.debian.org
+ping: cannot resolve http://www.debian.org: Unknown host
+(venv) Vladimirs-MacBook-Air:linux-basics-2020 vladimir$ ping www.debian.org
+PING www.debian.org (130.89.148.77): 56 data bytes
+64 bytes from 130.89.148.77: icmp_seq=0 ttl=54 time=59.383 ms
+64 bytes from 130.89.148.77: icmp_seq=1 ttl=54 time=75.187 ms
+64 bytes from 130.89.148.77: icmp_seq=2 ttl=54 time=58.830 ms
+64 bytes from 130.89.148.77: icmp_seq=3 ttl=54 time=63.282 ms
+64 bytes from 130.89.148.77: icmp_seq=4 ttl=54 time=59.702 ms
+^C
+--- www.debian.org ping statistics ---
+5 packets transmitted, 5 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 58.830/63.277/75.187/6.157 ms
