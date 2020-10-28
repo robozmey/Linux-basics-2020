@@ -1,1 +1,42 @@
-# print your commands
+##### terminal 1
+(venv) Vladimirs-MacBook-Air:linux-basics-2020 vladimir$ docker build -t serverpy .
+[+] Building 2.4s (9/9) FINISHED
+ => [internal] load build definition from Dockerfile                                                                                                                   0.1s
+ => => transferring dockerfile: 36B                                                                                                                                    0.0s
+ => [internal] load .dockerignore                                                                                                                                      0.1s
+ => => transferring context: 2B                                                                                                                                        0.0s
+ => [internal] load metadata for docker.io/library/python:3.7                                                                                                          2.2s
+ => [1/4] FROM docker.io/library/python:3.7@sha256:c952606af7157b7439359a0e3141f429269eedac71fd27361ac001cdb8f7764f                                                    0.0s
+ => [internal] load build context                                                                                                                                      0.0s
+ => => transferring context: 58B                                                                                                                                       0.0s
+ => CACHED [2/4] ADD ./src/server.py /                                                                                                                                 0.0s
+ => CACHED [3/4] WORKDIR src                                                                                                                                           0.0s
+ => CACHED [4/4] COPY src .                                                                                                                                            0.0s
+ => exporting to image                                                                                                                                                 0.1s
+ => => exporting layers                                                                                                                                                0.0s
+ => => writing image sha256:228dfb0c92f9edb34e30d843a1cb1f1e3c7ecdf6915c20ef7ead9cee56b08f91                                                                           0.0s
+ => => naming to docker.io/library/serverpy                                                                                                                            0.0s
+(venv) Vladimirs-MacBook-Air:linux-basics-2020 vladimir$ docker run -p 65432:65432 serverpy
+Connected by ('172.17.0.1', 35646)
+Traceback (most recent call last):
+  File "server.py", line 14, in <module>
+    conn.sendall("OK:".encode('utf-8')+ data)
+BrokenPipeError: [Errno 32] Broken pipe
+
+##### terminal 2
+(venv) Vladimirs-MacBook-Air:linux-basics-2020 vladimir$ telnet localhost 65432
+Trying 127.0.0.1...
+Connected to localhost.
+Escape character is '^]'.
+A
+OK:A
+B
+OK:B
+lolkek
+OK:lolkek
+^]
+telnet> Connection closed.
+(venv) Vladimirs-MacBook-Air:linux-basics-2020 vladimir$ docker stop serverpy
+Error response from daemon: No such container: serverpy
+
+
